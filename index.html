@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Tournoi Padel</title>
+    <link rel="stylesheet" type="text/css" href="style16.css" />
+    <script type="text/javascript" src="script1.js"></script>
+</head>
+
+<body onload="loading()">
+    <header>
+        <img src="logo.webp" alt="Padel Factory Logo">
+        <nav id="navMenu">
+            
+            <button onclick="display('choixTournoi'); headerButtonsColorChange('hchoixTournoi')"
+                id="hchoixTournoi">Choix Du Tournoi</button>
+            <button onclick="LoadJoueurs('Joueurs'); headerButtonsColorChange('hJoueurs')"
+                id="hJoueurs">Joueurs</button>
+            <button onclick="LoadEquipes('Equipes'); headerButtonsColorChange('hEquipes')"
+                id="hEquipes">Equipes</button>
+            <button onclick="LoadFeuil1('Feuil1'); headerButtonsColorChange('hFeuil1')" id="hFeuil1">Feuil1</button>
+            <button onclick="LoadTableauFinal('TableauFinal'); headerButtonsColorChange('hTableauFinal')"
+                id="hTableauFinal">Tableau Final</button>
+            <button
+                onclick="LoadTableauSecondaire('Tableau Secondaire'); headerButtonsColorChange('hTableauSecondaire')"
+                id="hTableauSecondaire">Tableau Secondaire</button>
+            <button onclick="LoadClassement('Classement'); headerButtonsColorChange('hClassement')"
+                id="hClassement">Classement</button>
+        </nav>
+        
+        <button id="hide" onclick="hide()">></button>
+    </header>
+    <div id='main'>
+        <div id='choixTournoi'>
+
+            <button onclick="selectPlayers(16, 'ClasseSeize')" id='ClasseSeize' value="16Classe">16 Equipes /
+                classé</button>
+            <button onclick="selectPlayers(16, 'loisirSeize')" id='loisirSeize' value="16loisir">16 Equipes /
+                loisir</button>
+            <button onclick="selectPlayers(12, 'ClasseDouze')" id='ClasseDouze' value="16loisir">12 Equipes /
+                classé</button>
+            <button onclick="selectPlayers(12, 'loisirDouze')" id='loisirDouze' value="12loisir">12 Equipes /
+                loisir</button>
+            <h1 id='tournoi'></h1>
+        </div>
+        <div id='Feuil1'>
+            <button onclick="essai()">Click</button>
+            <div id="tableaux">
+                <table id='firstTable'>
+
+                </table>
+                <table id='SecondTable'>
+                </table>
+            </div>
+        </div>
+        <div id='Equipes'>
+            <button onclick="editTeams()">Edition des Equipes</button>
+            <div id="ChoixDesEquipes">
+            </div>  
+        </div>
+        <div id="Joueurs"><button onclick="editPlayers()">Edition des Joueurs</button>
+            <div id='selectPlayers'></div>
+        </div>
+        <div id='TableauFinal'>
+            <div class="backgroundColorBracket">
+                <div id='tableau16Equipes'></div>
+                <div id='tableau12Equipes'></div>
+                <div class="perdantQuart">
+                    <div class="Branch_5">
+                        <div class="Match_12">
+                            <div class="Object_11">
+                                <span class="Name" id="Repeche10">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart110" value="0"
+                                    id="ResultDefaitisteQuart110" onclick="myFunction2(2,0)">
+                                <input type="number" class="ResultDefaitisteQuart120" value="0"
+                                    onclick="myFunction2(2,0)" id="ResultDefaitisteQuart120">
+                                <input type="number" class="ResultDefaitisteQuart130" value="0"
+                                    onclick="myFunction2(2,0)" id="ResultDefaitisteQuart130">
+                                <span class="Score" id="Repeche20">0</span>
+                                <span class="Name" id="Repeche20">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart210" value="0"
+                                    onclick="myFunction2(2,0)" id="ResultDefaitisteQuart210">
+                                <input type="number" class="ResultDefaitisteQuart220" value="0"
+                                    onclick="myFunction2(2,0)" id="ResultDefaitisteQuart220">
+                                <input type="number" class="ResultDefaitisteQuart230" value="0"
+                                    onclick="myFunction2(2,0)" id="ResultDefaitisteQuart230">
+                                <span class="Score" id="ScoreDefaitisteQuart20">0</span>
+                            </div>
+                        </div>
+                        <div class="Match_12">
+                            <div class="Object_11">
+                                <span class="Name" id="Repeche11">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart111" value="0"
+                                    id="ResultDefaitisteQuart111" onclick="myFunction2(2,1)">
+                                <input type="number" class="ResultDefaitisteQuart121" value="0"
+                                    onclick="myFunction2(2,1)" id="ResultDefaitisteQuart121">
+                                <input type="number" class="ResultDefaitisteQuart131" value="0"
+                                    onclick="myFunction2(2,1)" id="ResultDefaitisteQuart131">
+                                <span class="Score" id="ScoreDefaitisteQuart11">0</span>
+                                <span class="Name" id="Repeche21">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart211" value="0"
+                                    onclick="myFunction2(2,1)" id="ResultDefaitisteQuart211">
+                                <input type="number" class="ResultDefaitisteQuart221" value="0"
+                                    onclick="myFunction2(2,1)" id="ResultDefaitisteQuart221">
+                                <input type="number" class="ResultDefaitisteQuart231" value="0"
+                                    onclick="myFunction2(2,1)" id="ResultDefaitisteQuart231">
+                                <span class="Score" id="ScoreDefaitisteQuart21">0</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 5eme et 6eme place -->
+                    <div class="Branch_6">
+                        <div class="Match_11">
+                            <div class="Object_31">
+                                <span class="Name" id="RepecheFinal10">5eme Place</span>
+                                <input type="number" class="ResultFinalQuart110" value="0" id="ResultFinalQuart110"
+                                    onclick="myFunction3(2,0)">
+                                <input type="number" class="ResultFinalQuart120" value="0" onclick="myFunction3(2,0)"
+                                    id="ResultFinalQuart120">
+                                <input type="number" class="ResultFinalQuart130" value="0" onclick="myFunction3(2,0)"
+                                    id="ResultFinalQuart130">
+                                <span class="Score" id="ScoreFinalQuart10">0</span>
+                                <span class="Name" id="RepecheFinal20">6eme Place</span>
+                                <input type="number" class="ResultFinalQuart210" value="0" onclick="myFunction3(2,0)"
+                                    id="ResultFinalQuart210">
+                                <input type="number" class="ResultFinalQuart220" value="0" onclick="myFunction3(2,0)"
+                                    id="ResultFinalQuart220">
+                                <input type="number" class="ResultFinalQuart230" value="0" onclick="myFunction3(2,0)"
+                                    id="ResultFinalQuart230">
+                                <span class="Score" id="ScoreFinalQuart20">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="perdantperdantQuart">
+                    <div class="Branch_7">
+                        <!-- 7eme et 8eme place -->
+                        <div class="Match_23">
+                            <div class="Object_41">
+                                <span class="Name" id="RepecheFinal11">7eme ¨Place</span>
+                                <input type="number" class="ResultFinalQuart111" value="0" id="ResultFinalQuart111"
+                                    onclick="myFunction4(2,1)">
+                                <input type="number" class="ResultFinalQuart121" value="0" onclick="myFunction4(2,1)"
+                                    id="ResultFinalQuart121">
+                                <input type="number" class="ResultFinalQuart131" value="0" onclick="myFunction4(2,1)"
+                                    id="ResultFinalQuart131">
+                                <span class="Score" id="ScoreFinalQuart11">0</span>
+                                <span class="Name" id="RepecheFinal21">8eme Place</span>
+                                <input type="number" class="ResultFinalQuart211" value="0" onclick="myFunction4(2,1)"
+                                    id="ResultFinalQuart211">
+                                <input type="number" class="ResultFinalQuart221" value="0" onclick="myFunction4(2,1)"
+                                    id="ResultFinalQuart221">
+                                <input type="number" class="ResultFinalQuart231" value="0" onclick="myFunction4(2,1)"
+                                    id="ResultFinalQuart231">
+                                <span class="Score" id="ScoreFinalQuart21">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id='Tableau Secondaire'>
+            <div class="backgroundColorBracket">
+                <div id="tableauSecondaire">
+                </div>
+                <div class="SperdantQuart" id='SperdantQuart'>
+                    <div class="Branch_11">
+                        <div class="Match_22">
+                            <div class="Object_21">
+                                <span class="Name" id="SRepeche10">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart110" value="0"
+                                    id="SResultDefaitisteQuart110" onclick="myFunction8(2,0)">
+                                <input type="number" class="ResultDefaitisteQuart120" value="0"
+                                    onclick="myFunction8(2,0)" id="SResultDefaitisteQuart120">
+                                <input type="number" class="ResultDefaitisteQuart130" value="0"
+                                    onclick="myFunction8(2,0)" id="SResultDefaitisteQuart130">
+                                <span class="Score" id="SScoreDefaitisteQuart10">0</span>
+                                <span class="Name" id="SRepeche20">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart210" value="0"
+                                    onclick="myFunction8(2,0)" id="SResultDefaitisteQuart210">
+                                <input type="number" class="ResultDefaitisteQuart220" value="0"
+                                    onclick="myFunction8(2,0)" id="SResultDefaitisteQuart220">
+                                <input type="number" class="ResultDefaitisteQuart230" value="0"
+                                    onclick="myFunction8(2,0)" id="SResultDefaitisteQuart230">
+                                <span class="Score" id="SScoreDefaitisteQuart20">0</span>
+                            </div>
+                        </div>
+                        <div class="Match_22">
+                            <div class="Object_21">
+                                <span class="Name" id="SRepeche11">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart111" value="0"
+                                    id="SResultDefaitisteQuart111" onclick="myFunction8(2,1)">
+                                <input type="number" class="ResultDefaitisteQuart121" value="0"
+                                    onclick="myFunction8(2,1)" id="SResultDefaitisteQuart121">
+                                <input type="number" class="ResultDefaitisteQuart131" value="0"
+                                    onclick="myFunction8(2,1)" id="SResultDefaitisteQuart131">
+                                <span class="Score" id="SScoreDefaitisteQuart11">0</span>
+                                <span class="Name" id="SRepeche21">_____</span>
+                                <input type="number" class="ResultDefaitisteQuart211" value="0"
+                                    onclick="myFunction8(2,1)" id="SResultDefaitisteQuart211">
+                                <input type="number" class="ResultDefaitisteQuart221" value="0"
+                                    onclick="myFunction8(2,1)" id="SResultDefaitisteQuart221">
+                                <input type="number" class="ResultDefaitisteQuart231" value="0"
+                                    onclick="myFunction8(2,1)" id="SResultDefaitisteQuart231">
+                                <span class="Score" id="SScoreDefaitisteQuart21">0</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 5eme et 6eme place -->
+                    <div class="Branch_12">
+                        <div class="Match_21">
+                            <div class="Object_43">
+                                <span class="Name" id="SRepecheFinal10">13eme Place</span>
+                                <input type="number" class="ResultFinalQuart110" value="0" id="SResultFinalQuart110"
+                                    onclick="myFunction9(2,0)">
+                                <input type="number" class="ResultFinalQuart120" value="0" onclick="myFunction9(2,0)"
+                                    id="SResultFinalQuart120">
+                                <input type="number" class="ResultFinalQuart130" value="0" onclick="myFunction9(2,0)"
+                                    id="SResultFinalQuart130">
+                                <span class="Score" id="SScoreFinalQuart10">0</span>
+                                <span class="Name" id="SRepecheFinal20">14eme Place</span>
+                                <input type="number" class="ResultFinalQuart210" value="0" onclick="myFunction9(2,0)"
+                                    id="SResultFinalQuart210">
+                                <input type="number" class="ResultFinalQuart220" value="0" onclick="myFunction9(2,0)"
+                                    id="SResultFinalQuart220">
+                                <input type="number" class="ResultFinalQuart230" value="0" onclick="myFunction9(2,0)"
+                                    id="SResultFinalQuart230">
+                                <span class="Score" id="SScoreFinalQuart20">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="SperdantperdantQuart" id="SperdantperdantQuart">
+                    <div class="Branch_13">
+                        <!-- 7eme et 8eme place -->
+                        <div class="Match_33">
+                            <div class="Object_51">
+                                <span class="Name" id="SRepecheFinal11">15eme Place</span>
+                                <input type="number" class="ResultFinalQuart111" value="0" id="SResultFinalQuart111"
+                                    onclick="myFunction10(2,1)">
+                                <input type="number" class="ResultFinalQuart121" value="0" onclick="myFunction10(2,1)"
+                                    id="SResultFinalQuart121">
+                                <input type="number" class="ResultFinalQuart131" value="0" onclick="myFunction10(2,1)"
+                                    id="SResultFinalQuart131">
+                                <span class="Score" id="SScoreFinalQuart11">0</span>
+                                <span class="Name" id="SRepecheFinal21">16eme Place</span>
+                                <input type="number" class="ResultFinalQuart211" value="0" onclick="myFunction10(2,1)"
+                                    id="SResultFinalQuart211">
+                                <input type="number" class="ResultFinalQuart221" value="0" onclick="myFunction10(2,1)"
+                                    id="SResultFinalQuart221">
+                                <input type="number" class="ResultFinalQuart231" value="0" onclick="myFunction10(2,1)"
+                                    id="SResultFinalQuart231">
+                                <span class="Score" id="SScoreFinalQuart21">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='Classement'>
+            <table id="RankingTable">
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

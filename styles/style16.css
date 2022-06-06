@@ -1,0 +1,532 @@
+body {
+    background-color: rgb(26, 19, 19);
+
+}
+
+button {
+    color: white;
+    background-color: rgb(87, 18, 18);
+    font-size: larger;
+    border-color: rgb(0, 0, 0);
+
+}
+
+header {
+    display: block;
+    border: 4px solid black;
+    background-color: rgb(147, 18, 18);
+    text-align: center;
+    padding: 8px;
+    color: white;
+    margin: 8px;
+}
+
+#hide {
+    transform: rotate(90deg);
+}
+
+button:hover {
+    background-color: rgb(201, 139, 99);
+}
+
+/* -------------------------------Choix Tournoi---------------------------------------- */
+
+#main {
+    text-align: center;
+}
+
+#choixTournoi>h1 {
+    color: white;
+}
+
+/* -------------------------------/Choix Tournoi\---------------------------------------- */
+/* -------------------------------/Choix Joueurs\---------------------------------------- */
+
+/* -------------------------------/Choix Joueurs\---------------------------------------- */
+
+/* -------------------------------Choix Equipes---------------------------------------- */
+#ChoixDesEquipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+#ChoixDesEquipes>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    color: white;
+    background-color: rgb(153, 21, 21);
+    border: solid;
+    border-color: black;
+    margin: 8px;
+    padding: 5px;
+}
+
+#ChoixDesEquipes>div>select {
+    width: 80%;
+}
+
+
+
+/* -------------------------------/Choix Equipes\---------------------------------------- */
+
+
+
+
+/* -------------------------------Feuil1---------------------------------------- */
+#tableaux {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#firstTable,
+#SecondTable {
+    margin: 8px;
+    padding: 8px;
+    color: white;
+    background-color: rgb(212, 30, 30);
+    border-collapse: collapse;
+    border: 2px solid black;
+
+}
+
+#firstTable td,
+#SecondTable td {
+
+    border: 2px solid black;
+}
+
+#firstTable tr:nth-child(even),
+#SecondTable tr:nth-child(even) {
+    background-color: rgb(179, 37, 37);
+
+
+
+}
+
+#firstTable th {
+
+    background-color: rgb(128, 22, 22);
+
+}
+
+
+
+/* -------------------------------/Feuil1\---------------------------------------- */
+
+/* -------------------------------Tableau Final---------------------------------------- */
+
+#tableau16Equipes {
+    padding: 2px;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+
+
+/* ------------------------------------------------ */
+.perdantperdantQuart {
+    padding: 2px;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+
+.Branch_7 {
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_41 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+}
+
+.Match_23 {
+    height: 80px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-top: 5px;
+}
+
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */
+
+.perdantQuart {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 2px;
+}
+
+.Branch_5 {
+    flex-direction: row-reverse;
+    height: 120px;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_6 {
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_11,
+.Object_12 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+}
+
+.Object_31 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+}
+
+.Match_11 {
+    height: 180px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-top: 5px;
+}
+
+/* ------------------------------------------------ */
+
+/* ------------------------------------------------ */
+
+.Branch_1 {
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_2 {
+    height: 90%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_3 {
+    height: 90%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_4 {
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_1:nth-child(even),
+.Object_2:nth-child(even),
+.Object_3:nth-child(even),
+.Object_4:nth-child(even) {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+
+}
+
+.Object_1:nth-child(odd),
+.Object_2:nth-child(odd),
+.Object_3:nth-child(odd),
+.Object_4:nth-child(odd) {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+
+}
+
+.Match_01 {
+    height: 50px;
+    margin-bottom: 11%;
+}
+
+.Object_2 {
+    margin-top: 25%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_02 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-bottom: 35%;
+}
+
+.Object_3 {
+    margin-top: 75%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_03 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-bottom: 50%;
+}
+
+.Object_4 {
+    margin-top: 110%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_04 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-top: 30px;
+}
+
+/* ------------------------------------------------ */
+
+/* -------------------------------/Tableau Final\---------------------------------------- */
+/* --------------------------------Classement----------------------------------------- */
+
+#RankingTable {
+
+    color: white;
+    background-color: rgb(212, 30, 30);
+    border-collapse: collapse;
+    border: 2px solid black;
+
+    padding: 8px;
+    margin-top: 5px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 46%;
+}
+
+#RankingTable>tr>td {
+
+    border: 2px solid black;
+}
+
+#RankingTable>tr:nth-child(even) {
+    background-color: rgb(179, 37, 37);
+
+
+
+}
+
+#RankingTable>tr>th {
+
+    background-color: rgb(128, 22, 22);
+
+}
+
+/* -------------------------------/Classement\---------------------------------------- */
+/* -------------------------------Tableau Secondaire---------------------------------------- */
+.backgroundColorBracket {
+    background-color: black;
+
+}
+
+#tableauSecondaire {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+    padding: 2px;
+
+}
+
+/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+.SperdantperdantQuart {
+    padding: 2px;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+
+}
+
+.Branch_13 {
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_51 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+}
+
+.Match_33 {
+    height: 80px;
+    margin-top: 5px;
+}
+
+/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+
+.SperdantQuart {
+    padding: 2px;
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid white;
+    color: white;
+}
+
+.Branch_11 {
+    height: 120px;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Branch_12 {
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_21,
+.Object_43 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+}
+
+.Object_21 {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+}
+
+.Match_43 {
+    height: 180px;
+    margin-top: 5px;
+}
+
+/* uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu */
+
+
+
+.Branch_8 {
+    height: 90%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_9 {
+    height: 90%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Branch_10 {
+    height: 100%;
+    width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Object_81:nth-child(even),
+.Object_82:nth-child(even),
+.Object_83:nth-child(even) {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+
+}
+
+.Object_81:nth-child(odd),
+.Object_82:nth-child(odd),
+.Object_83:nth-child(odd) {
+    display: grid;
+    grid-template-columns: 130px 40px 40px 40px 20px;
+    grid-template-rows: 25px 25px;
+    background-color: rgb(255, 0, 0);
+    width: 280px;
+    padding-top: 4px;
+
+
+}
+
+
+.Object_81 {
+    margin-top: 25%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_81 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-bottom: 35%;
+}
+
+.Object_82 {
+    margin-top: 75%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_82 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-bottom: 50%;
+}
+
+.Object_83 {
+    margin-top: 100%;
+    /*new value for symmetrical bracket 8 players*/
+}
+
+.Match_83 {
+    height: 50px;
+    /*new value for symmetrical bracket 8 players*/
+    margin-top: 20px;
+}
+
+/* ------------------------------------------------ */
+
+/* -------------------------------/Tableau Secondaire\---------------------------------------- */
